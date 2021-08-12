@@ -17,6 +17,7 @@ import java.util.List;
 public class DemoApplication implements CommandLineRunner {
 	@Autowired
 	private ItemRepository itemRepository;
+	@Autowired
 	private UserRepository userRepository;
 
 	public static void main(String[] args) {
@@ -51,20 +52,3 @@ public class DemoApplication implements CommandLineRunner {
 	}
 }
 
-/**	@Autowired
-private UserRepository userRepository;
- * @Override
- *        public void run(String...args) throws Exception{
- * 		userRepository.deleteAll();
- * 		userRepository.save(new User("a","윤여진","a@","1"));
- * 		userRepository.save(new User("b","윤여진","b@","1"));
- * 		userRepository.save(new User("c","여진","c@","1"));
- * 		List<User> users = userRepository.findAll();
- * 		System.out.println("전체를 출력 하시오");
- * 		for(User u: users){
- * 			System.out.println(u.toString());
- *        }
- * 		System.out.println("여진만 출력 하시오");
- * 		for(User u: userRepository.findAllByName("여진")){
- * 			System.out.println(u.toString());
- *        }*/

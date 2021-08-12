@@ -17,13 +17,13 @@ import java.util.Optional;
 public class UserController {
     private final UserServiceImpl userService;
     @GetMapping("/all") public List<User> findAll(){
-        return userRepository.findAll();
+        return userService.findAll();
     }
-    @GetMapping("/name/{name}") public List<User> findAllByName(String name){
-        return userRepository.findAllByName(name);
+    @GetMapping("/name/{name}") public List<User> findAllByName(@PathVariable String name){
+        return userService.findAllByName(name);
     }
-    @GetMapping("/id/{id}") public Optional<User> findById(long id){
-        return userRepository.findById(id);
+    @GetMapping("/id/{id}") public Optional<User> findById(@PathVariable long id){
+        return userService.findById(id);
     }
 
 }
