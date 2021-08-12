@@ -1,9 +1,9 @@
-package shop.tripn.app.demo.user.repository;
+package shop.tripn.app.demo.calculator.repository;
 
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
-import shop.tripn.app.demo.user.entity.User;
+import shop.tripn.app.demo.calculator.entity.User;
 
 import java.util.List;
 

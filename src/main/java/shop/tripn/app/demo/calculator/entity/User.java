@@ -1,10 +1,12 @@
-package shop.tripn.app.demo.user.entity;
+package shop.tripn.app.demo.calculator.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 
 @Document(collection = "users")
@@ -13,10 +15,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 public class User {
     @Id
-    private String userId;
+    private long userId;
+    private String username;
     private String name;
     private String email;
     private String password;
+    private Date regDate;
 
     @Override
     public String toString() {
