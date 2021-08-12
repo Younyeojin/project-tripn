@@ -15,10 +15,9 @@ import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-	@Autowired
-	private ItemRepository itemRepository;
-	@Autowired
-	private UserRepository userRepository;
+	@Autowired private ItemRepository itemRepository;
+	@Autowired private UserRepository userRepository;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -41,9 +40,9 @@ public class DemoApplication implements CommandLineRunner {
   			System.out.println(u.toString());
          }
 		itemRepository.deleteAll();
-		itemRepository.save(new Item(1, "갤럭시Z", 200, "신제품", new Date()));
-		itemRepository.save(new Item(2, "노트북", 150, "지문인식", new Date()));
-		itemRepository.save(new Item(3, "데스크탑", 100, "게이밍", new Date()));
+		itemRepository.save(new Item("갤럭시Z", 1, "신제품", 200, new Date()));
+		itemRepository.save(new Item("노트북", 1, "지문인식", 150, new Date()));
+		itemRepository.save(new Item("노트북", 1, "게이밍", 100, new Date()));
 		List<Item> items = itemRepository.findAll();
 		System.out.println("Print All Items");
 		for (Item u : items){

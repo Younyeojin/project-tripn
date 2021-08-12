@@ -12,10 +12,10 @@ import java.util.Date;
 @AllArgsConstructor
 @Data
 public class Item {
-    @Id private long itemId;
+    @Id private String itemName;
+    private long itemId;
     private String description;
     private int price;
-    private String itemName;
     private Date regDate;
 
     @Override
